@@ -13,13 +13,6 @@
      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-      } else {
-          document.documentElement.classList.remove('dark')
-      }
-  </script>
 </head>
 <body>
     <!-- nav bar-->
@@ -60,8 +53,9 @@
      </div>  
     </div>
    
-         <div class="todo-container">
-           <ul class="todolist"></ul>
+    <div class="todo-container">
+        <ul class="todolist"></ul>
+    </div>
        </section>
        <script src="/index.js"></script>
 </body>
