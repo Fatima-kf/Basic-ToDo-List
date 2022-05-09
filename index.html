@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List App</title>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+     crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+  </script>
+</head>
+<body>
+    <!-- nav bar-->
+    <nav>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a class="" href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="" href="https://wa.link/ihdbd4">Contact Us</a>
+                  </li>
+                  <li>
+                    <a class="" href="https://github.com/Fatima-khl">Git</a>
+                  </li>
+            </ul>
+        </div>
+    </nav>
+   <!-- header-->
+   <header>
+       <h1 class="title">To Do List</h1>
+   </header>
+   <!-- section-->
+   <section class="container">
+    <div class="form-container">
+     <form>
+       <input type="text" class="todo-input" />
+       <button type="submit" class="todo-button">
+         <i class="fas fa-plus-circle"></i>
+       </button>
+     </form>
+     <div class="select">
+       <select class="filter-todos" name='todos'>
+         <option value="all">All</option>
+         <option value="completed">Completed</option>
+         <option value="uncompleted">Uncompleted</option>
+       </select>
+     </div>  
+    </div>
+   
+         <div class="todo-container">
+           <ul class="todolist"></ul>
+       </section>
+       <script src="/index.js"></script>
+</body>
+</html>
